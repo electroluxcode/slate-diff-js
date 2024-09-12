@@ -29,7 +29,7 @@
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-
+    "allowJs": true,
     /* Module Resolution Options */
     "allowSyntheticDefaultImports": true,
 
