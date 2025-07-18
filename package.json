@@ -1,35 +1,55 @@
 {
-  "name": "slate-diff",
-  "version": "1.0.0-beta.0",
+  "name": "slate-diff-js",
+  "version": "1.1.1",
   "description": "",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "type": "module",
+  "typings": "dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
     "test": "tsdx test --coverage",
-    "build": "rm -rf ./dist && tsc -p tsconfig.json",
+    "build": "rollup -c",
     "publish": "npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pubuzhixing8/slate-diff.git"
+    "url": "git+https://github.com/electroluxcode/slate-diff-js.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pubuzhixing8/slate-diff/issues"
+    "url": "https://github.com/electroluxcode/slate-diff-js/issues"
   },
-  "homepage": "https://github.com/pubuzhixing8/slate-diff#readme",
+  "homepage": "https://github.com/electroluxcode/slate-diff-js#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "rollup-plugin-copy": "^3.5.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^15.0.2",
     "typescript": "^4.2.4",
     "husky": "^4.2.5",
-    "lodash": "^4.17.19",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
     "@types/lodash": "^4.14.157"
   },
   "dependencies": {
-    "changesets": "^1.0.2",
+    "lodash-es": "^4.17.21",
     "slate": "^0.62.0"
   }
 }

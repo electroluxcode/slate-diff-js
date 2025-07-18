@@ -1,4 +1,4 @@
-import { isEqual } from "lodash";
+import isEqual from "lodash-es/isEqual.js";
 import { copyWithout } from "../utils/copy-without";
 import { Node, Operation } from "slate";
 import { slateDiff } from "../slate-diff";
