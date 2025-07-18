@@ -4,7 +4,7 @@
 
 ```js
 
-import { slateDiff } from "./dist/esm/index.js";
+import { slateDiff } from "slate-diff-js";
 console.log(slateDiff([{
     type: 'paragraph',
     children: [
